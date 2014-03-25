@@ -21,10 +21,10 @@ results.save();
 
 Parses the file and returns an object the following properties:
 
-`file` - Name of the file parsed.
-`name` - Name of the Angular module.
-`dependencies` - Object containing `start`, `end`, and `modules` properties.
-`contents` - Contents of the file parsed.
-`save` - Function that will rewrite the parsed file with any changes the `dependencies.modules` property reflected in the new source.
+ - `file` - Name of the file parsed. 
+ - `name` - Name of the Angular module. 
+ - `dependencies` - Object containing `start`, `end`, and `modules` properties. 
+ - `contents` - Contents of the file parsed. 
+ - `save` - Function that will rewrite the parsed file with any changes the `dependencies.modules` property reflected in the new source.
 
 
