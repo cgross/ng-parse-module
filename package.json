@@ -1,0 +1,29 @@
+{
+  "name": "ng-parse-module",
+  "version": "0.1.0",
+  "description": "Small utility to read/write Angular module creation calls. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cgross/ng-parse-module.git"
+  },
+  "keywords": [
+    "angular",
+    "parse"
+  ],
+  "author": "Chris Gross",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cgross/ng-parse-module/issues"
+  },
+  "dependencies": {
+    "esprima": "~1.0.4",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {
+    "should": "~3.2.0-beta1"
+  }
+}
