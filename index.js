@@ -14,8 +14,11 @@ var save = function(){
         return module;
     });
 
+    var indexSearch = this.contents.match(/([ \t]*)angular\.module\(/)
+
+    var indent = (indexSearch && indexSearch[1]) || '';
     var contents = this.contents.substring(0,
-        this.dependencies.start) + ' [' + modules.join(', ') + ']' +
+        this.dependencies.start) + ' [' + modules.join(',\n' + indent + indent) + '\n' + indent + ']' +
         this.contents.substring(this.dependencies.end);
 
     fs.writeFileSync(this.file,contents,'utf8');
