@@ -1,4 +1,7 @@
-angular.module('test', ['newDep', 'newDep2']);
+angular.module('test', [
+    'newDep',
+    'newDep2'
+]);
 
 angular.module('test').config(function($routeProvider) {
 
