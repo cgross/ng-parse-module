@@ -19,8 +19,12 @@ var save = function(){
     // search for angular.module's indent; if none, look for tabs; if none, use double spaces
     var indent = (indexSearch && indexSearch[1]) || (this.contents.search(/\t/) !== -1) && '\t' || '  ';
     var contents = this.contents.substring(0,
-        this.dependencies.start) + ' [' + '\n' + indent + indent + modules.join(',\n' + indent + indent) + '\n' + indexSearch + ']' +
-        this.contents.substring(this.dependencies.end);
+        this.dependencies.start) +
+      ' [' + '\n' + indent + indent +
+      modules.join(',\n' + indent + indent) + '\n' +
+      ((indexSearch && indexSearch[1]) || '') +
+      ']' +
+      this.contents.substring(this.dependencies.end);
 
     fs.writeFileSync(this.file,contents,'utf8');
 };
